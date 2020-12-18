@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__wrapper">
+      <a href="clear.html" class="logo">
+        <img src="img/logo.png" alt="">
+      </a>
+      <h1 class="h1">Инженерные системы корпуса 1</h1>
+    </div>
+  </header>
+  <main class="container">
+    <nav class="main_nav">
+      <ul>
+        <li class="active">
+          <a href="index.html"><span><img src="img/vent.svg" alt="Вентиляция"></span>Вентиляция</a>
+        </li>
+        <li>
+          <a href="clear.html"><span><img src="img/cold.svg" alt="Освещение"></span>Освещение</a>
+        </li>
+        <li>
+          <a href="clear.html"><span><img src="img/enrg.svg" alt="Электрощитовая"></span>Электрощитовая</a>
+        </li>
+        <li>
+          <a href="clear.html"><span><img src="img/lamp.svg" alt="Освещение"></span>Освещение</a>
+        </li>
+        <li>
+          <a href="clear.html"><span><img src="img/pump.svg" alt="Электрощитовая"></span>Электрощитовая</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="main_content">
+      <ul>
+        <li>
+          <ul class="buttons">
+            <li><button data-color="#d8cfcf" class="button-white">
+                <span>Регулирующий клапан</span>
+                <span>000.0 %</span>
+                <div class="img__wrapper">
+                  <img src="img/clap.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#d8cfcf" class="button-white">
+                <span> Нагревательная ступень 1</span>
+                <span>000.0 %</span>
+                <div class="img__wrapper">
+                  <img src="img/heater1.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#a8b14e" class="button-green">
+                <span>Нагревательная ступень 2</span>
+                <span>000.0 %</span>
+                <div class="img__wrapper">
+                  <img src="img/heater2.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#a8b14e" class="button-green">
+                <span> Охлаждение</span>
+                <span>000.0 %</span>
+                <div class="img__wrapper">
+                  <img src="img/cold2.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#a8b14e" class="button-green">
+                <span> t° Наружного воздуха</span>
+                <span>+000.00 °C</span>
+                <div class="img__wrapper">
+                  <img src="img/outair.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#ec4c69" class="button-red">
+                <span> t° Приточного воздуха</span>
+                <span>+000.00 °C</span>
+                <div class="img__wrapper">
+                  <img src="img/moveair.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#ec4c69" class="button-red">
+                <span>t° Обратной воды</span>
+                <span>+000.00 °C</span>
+                <div class="img__wrapper">
+                  <img src="img/revwater.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#ec4c69" class="button-red">
+                <span> t° Воздуха в помещении</span>
+                <span>+000.00 °C</span>
+                <div class="img__wrapper">
+                  <img src="img/houseair.svg" alt="">
+                </div>
+              </button>
+            </li>
+            <li> <button data-color="#ec4c69" class="button-red">
+                <span> Вращение вентилятора</span>
+                <span>+000.00 Гц</span>
+                <div class="img__wrapper">
+                  <img src="img/ventspeed.svg" alt="">
+                </div>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="indicators-content">
+          <ul>
+            <li>
+              <div class="indicator"></div><span>Замораживание воздухонагревателя</span>
+            </li>
+            <li>
+              <div class="indicator"></div><span>Засорение фильтра</span>
+            </li>
+            <li>
+              <div class="indicator indicator_on"></div><span>Преобразователь частоты</span>
+            </li>
+            <li>
+              <div class="indicator"></div><span>Давление на приточном вентиляторе</span>
+            </li>
+            <li>
+              <div class="indicator indicator_off"></div><span class="indicator-text--big">Пожар</span>
+            </li>
+          </ul>
+        </li>
+        <li class="main-content">
+          <button class="dots">
+            ...
+          </button>
+          <ul class="tabs">
+            <li class="active">
+              <a href="#">Аналитика</a>
+            </li>
+            <li>
+              <a href="#">События</a>
+            </li>
+            <li>
+              <a href="#">Значения</a>
+            </li>
+          </ul>
+          <ul class="tabs-content">
+            <li class="analytics active">
+              <div class="canvas__wrapper">
+                <canvas></canvas>
+              </div>
+              <div class="periods__wrapper">
+                <ul class="periods">
+                  <li>неделя</li>
+                  <li>месяц</li>
+                  <li>час</li>
+                </ul>
+              </div>
+            </li>
+            <li class="events">
+              <table>
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>Установка</th>
+                    <th>Наименование</th>
+                    <th>T</th>
+                    <th>Дата</th>
+                    <th>Ст.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>1</span></td>
+                    <td>Насос Н1</td>
+                    <td>проблема засорение фильтра неустранима</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>2</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>3</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>4</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>5</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>6</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>7</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>8</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>9</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_off"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>10</span></td>
+                    <td>Насос Н1</td>
+                    <td>засорение фильтра</td>
+                    <td>П1-11:25</td>
+                    <td>29.09.2020</td>
+                    <td>
+                      <div class="indicator indicator--big indicator_on"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="periods__wrapper">
+                <ul class="periods">
+                  <li>неделя</li>
+                  <li>месяц</li>
+                  <li>час</li>
+                </ul>
+              </div>
+            </li>
+            <li class="values">
+              <ul class="values-list">
+                <li>
+                  <p class="value-name">Температура воздуха</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="value-name">Параметр 2</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="value-name">Параметр 3</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="value-name">Параметр 4</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="value-name">Параметр 5</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="value-name">Параметр 6</p>
+                  <p class="value-param">задан.</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="50%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">среднее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="100%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                  <p class="value-param">текущее</p>
+                  <div class="value-progress__wrapper">
+                    <div data-width="90%" class="value-progress"></div>
+                    <p class="value-number"> +00.0 ℃</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="periods__wrapper">
+                <ul class="periods">
+                  <li>неделя</li>
+                  <li>месяц</li>
+                  <li>час</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="control">
+          <ul>
+            <li> <button class="button-on">Включение<img src="img/onbtn.svg" alt=""></button></li>
+            <li class="set-value">
+              <p>Уставка температуры</p>
+              <p class="d-flex"><input value="+000.0" type="text" pattern="[0-9]*" /><button><img src="img/arrow.svg"
+                    alt=""></button></p>
+              <p>Текущее значение <span>+000.0</span></p>
+            </li>
+            <li class="set-value">
+              <p>Уставка температуры</p>
+              <p class="d-flex"><input value="+000.0" type="text" pattern="[0-9]*" /><button><img src="img/arrow.svg"
+                    alt=""></button></p>
+              <p>Текущее значение <span>+000.0</span></p>
+            </li>
+            <li><button class="button-reset">Сброс аварии<img src="img/reset.svg" alt=""></button></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src=js.js></script>
+</body>
+
+</html>
